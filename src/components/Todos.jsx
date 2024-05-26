@@ -4,7 +4,7 @@ import TodoItem from "./TodoItem";
 function Todos(props){
     
     return (
-        <div>
+        <div style={styles.container}>
             <h1>This is Todos component</h1>
 
             {props.todos.map((todo) => {
@@ -14,5 +14,13 @@ function Todos(props){
         </div>
     )
 }
+
+const styles = {
+    container: {
+      width: '40%',
+      margin: '0 auto',
+    },
+  }
+  
 
 export default Todos;
