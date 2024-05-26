@@ -23,12 +23,23 @@ function App() {
   // console.log(todos);
 
   return ( 
-    <>
-      <h1>My Todolist</h1>
+    <div style={styles.container}>
+      <h1 style={styles.title}>My Todolist</h1>
 
-<Todos todos={todos} />
-    </>
+    <Todos todos={todos} />
+    </div>
    );
+}
+
+
+const styles = {
+  container: {
+    textAlign: 'center',
+    padding: '12px',
+  },
+  title: {
+    fontSize: '36px',
+  },
 }
 
 export default App;
