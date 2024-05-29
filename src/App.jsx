@@ -20,13 +20,24 @@ function App() {
     },
   ]);
 
+  // Definisikan toggleCompleted di sini
+  const toggleCompleted = (todoId) => {
+    const updatedTodos = todos.map((todo) => {
+      if (todo.id === todoId) {
+        todo.completed = !todo.completed;
+      }
+      return todo;
+    })
+    setTodos(updatedTodos);
+  }
+
   // console.log(todos);
 
   return ( 
     <div style={styles.container}>
       <h1 style={styles.title}>My Todolist</h1>
-
-    <Todos todos={todos} />
+      {/* Teruskan function toggleCompleted ke component Todos */}  
+    <Todos todos={todos} toggleCompleted={toggleCompleted} />
     </div>
    );
 }
