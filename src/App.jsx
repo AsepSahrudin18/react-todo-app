@@ -31,13 +31,16 @@ function App() {
     setTodos(updatedTodos);
   }
 
-  // console.log(todos);
+  const deleteTodo = (id) => {
+    const deleteTodos = todos.filter(todo => {return todo.id !== id} );
+    setTodos(deleteTodos);
+  }
 
   return ( 
     <div style={styles.container}>
       <h1 style={styles.title}>My Todolist</h1>
       {/* Teruskan function toggleCompleted ke component Todos */}  
-    <Todos todos={todos} toggleCompleted={toggleCompleted} />
+    <Todos todos={todos} toggleCompleted={toggleCompleted} deleteTodo={deleteTodo}/>
     </div>
    );
 }

@@ -19,6 +19,9 @@ function TodoItem(props){
              />
 
             <p style={getTodoTitleStyle()}>{props.todo.title}</p>
+
+            {/* Tambahkan sebuah button di sini */}
+            <button onClick={() => props.deleteTodo(props.todo.id)} style={styles.button}>x</button>
         </div>
     )
 }
@@ -37,6 +40,16 @@ const styles = {
         marginRight: '10px',
         height: '18px',
         width: '18px',
+    },
+    button: {
+      backgroundColor: '#BB0000',
+      color: '#fff',
+      height: '30px',
+      width: '30px',
+      borderRadius: '100%',
+      border: 'none',
+      cursor: 'pointer',
+      fontSize: '16px',
     },
     
   }
