@@ -9,7 +9,7 @@ function Todos(props){
 
             {props.todos.map((todo) => {
                 // return <p key={todo.id}>{todo.title}</p>
-                return <TodoItem key={todo.id} todo={todo} toggleCompleted={props.toggleCompleted}/>
+                return <TodoItem key={todo.id} todo={todo} toggleCompleted={props.toggleCompleted} deleteTodo={props.deleteTodo}/>
             })}
         </div>
     )
